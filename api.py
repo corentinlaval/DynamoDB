@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Configuration DynamoDB
 dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
-TABLE_NAME = 'SaveChristmas'
+TABLE_NAME = 'SaveCloudmas'
 table = dynamodb.Table(TABLE_NAME)
 
 @app.route('/api', methods=['POST'])

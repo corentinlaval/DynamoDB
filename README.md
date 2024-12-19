@@ -11,6 +11,7 @@ python -m venv env
 #Windows:
 ./env/Scripts/activate
 pip install boto3
+pip install flask
 ```
 
 ## Send data
