@@ -1,7 +1,14 @@
 import boto3
+from aws_credentials import aws_access_key_id, aws_secret_access_key, aws_session_token
 
-# Initialize a DynamoDB client
-client = boto3.client(  'dynamodb')
+# Initialize the DynamoDB client
+client = boto3.client(
+    'dynamodb',
+    aws_access_key_id=aws_access_key_id,
+    aws_secret_access_key=aws_secret_access_key,
+    aws_session_token=aws_session_token,  # Use only if it exists
+    region_name='us-east-1'
+)
 
 try:
     # Scan the entire table
