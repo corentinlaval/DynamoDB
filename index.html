@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Noël</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>🎄 Gestion de Noël 🎁</h1>
+    </header>
+    <main class="container">
+        <section class="form-section">
+            <h2>Ajouter un cadeau</h2>
+            <form id="gift-form">
+                <div class="form-group">
+                    <label for="gift-name">Nom du cadeau:</label>
+                    <input type="text" id="gift-name" name="gift-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="recipient-name">Destinataire:</label>
+                    <input type="text" id="recipient-name" name="recipient-name" required>
+                </div>
+                <button type="submit" class="btn">Ajouter 🎅</button>
+            </form>
+        </section>
+        <section class="list-section">
+            <h2>Liste des cadeaux 🎁</h2>
+            <ul id="gift-list">
+                <!-- Les cadeaux seront affichés ici -->
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>🎅 Joyeux Noël et bonne gestion des cadeaux ! 🎄</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
