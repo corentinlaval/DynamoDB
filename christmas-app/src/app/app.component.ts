@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {GiftManagementComponent} from './gift-management/gift-management.component';
-import {SantaDashboardComponent} from './santa-dashboard/santa-dashboard.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [GiftManagementComponent, SantaDashboardComponent],
+  standalone: true,
+  imports: [RouterModule], // Import du module Router
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title = 'christmas-app';
-}
+export class AppComponent {}

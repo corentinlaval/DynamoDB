@@ -1,38 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { ChildDataService } from '../services/child-data.service';
 import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-santa-dashboard',
-  templateUrl: './santa-dashboard.component.html',
-  styleUrls: ['./santa-dashboard.component.css'],
+  standalone: true,
   imports: [
     NgForOf
-  ]
+  ],
+  templateUrl: './santa-dashboard.component.html',
+  styleUrls: ['./santa-dashboard.component.css'],
 })
 export class SantaDashboardComponent implements OnInit {
-  childrenByCity: { [city: string]: any[] } = {};
-
-  constructor(private childDataService: ChildDataService) {}
+  childrenByCity: { [key: string]: any[] } = {};
 
   ngOnInit() {
-    this.childDataService.getChildren().subscribe({
-      next: (data: any[]) => {
-        this.groupByCity(data);
-      },
-      error: (err: any) => {
-        console.error('Error fetching children:', err);
-      },
-    });
-  }
-
-  groupByCity(data: any[]) {
-    this.childrenByCity = data.reduce((acc, child) => {
-      const city = child.city || 'Unknown';
-      if (!acc[city]) acc[city] = [];
-      acc[city].push(child);
-      return acc;
-    }, {});
+    this.childrenByCity = {
+      "North Pole": [
+        { firstName: 'John', lastName: 'Doe', address: '123 Candy Lane' },
+        { firstName: 'Jane', lastName: 'Smith', address: '456 Snowflake St' },
+      ],
+    };
   }
 
   protected readonly Object = Object;
