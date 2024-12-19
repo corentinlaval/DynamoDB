@@ -1,0 +1,26 @@
+<div class="container">
+  <header class="header">
+    <h1>🎅 Santa's Dashboard</h1>
+    <p class="subtitle">Children grouped by city!</p>
+  </header>
+
+  <section *ngFor="let city of Object.keys(childrenByCity)">
+    <h2>{{ city }}</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let child of childrenByCity[city]">
+        <td>{{ child.firstName }}</td>
+        <td>{{ child.lastName }}</td>
+        <td>{{ child.address }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
