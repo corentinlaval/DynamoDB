@@ -1,7 +1,7 @@
 <div class="container">
   <header class="header">
     <h1>🎅 Santa's Dashboard</h1>
-    <p class="subtitle">Children grouped by city!</p>
+    <p class="subtitle">Children's wishes grouped by city!</p>
   </header>
 
   <section *ngFor="let city of Object.keys(childrenByCity)">
@@ -12,6 +12,7 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Address</th>
+        <th>Gifts</th>
       </tr>
       </thead>
       <tbody>
@@ -19,6 +20,11 @@
         <td>{{ child.firstName }}</td>
         <td>{{ child.lastName }}</td>
         <td>{{ child.address }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let gift of child.gifts">{{ gift }}</li>
+          </ul>
+        </td>
       </tr>
       </tbody>
     </table>

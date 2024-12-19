@@ -51,6 +51,26 @@
           required
         />
       </div>
+      <div class="form-group">
+        <label for="giftName">Gift:</label>
+        <input
+          type="text"
+          id="giftName"
+          [(ngModel)]="newGift"
+          name="giftName"
+          placeholder="Enter a gift"
+        />
+        <button type="button" class="btn" (click)="addGift()">Add Gift 🎁</button>
+      </div>
+      <div class="gift-list">
+        <h3>Gift List:</h3>
+        <ul>
+          <li *ngFor="let gift of newChild.gifts">
+            {{ gift }}
+            <button type="button" class="btn-delete" (click)="removeGift(gift)">❌</button>
+          </li>
+        </ul>
+      </div>
       <button type="submit" class="btn">Submit Details 🎅</button>
     </form>
   </section>
