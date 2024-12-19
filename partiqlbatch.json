@@ -1,18 +1,5 @@
 [
     {
-      "Statement": "INSERT INTO \"SaveChristmas\" VALUE {'ID': 1, 'Address': '123 Holiday Lane', 'Cadeau': 'Velo', 'Nom': 'Dupont', 'Prenom': 'Jean'}"
-    },
-    {
-      "Statement": "INSERT INTO \"SaveChristmas\" VALUE {'ID': 2, 'Address': '456 Winter Street', 'Cadeau': 'Ordinateur Portable', 'Nom': 'Durand', 'Prenom': 'Marie'}"
-    },
-    {
-      "Statement": "INSERT INTO \"SaveChristmas\" VALUE {'ID': 3, 'Address': '789 Snowy Avenue', 'Cadeau': 'Tablette', 'Nom': 'Lemoine', 'Prenom': 'Pierre'}"
-    },
-    {
-      "Statement": "INSERT INTO \"SaveChristmas\" VALUE {'ID': 4, 'Address': '101 Christmas Road', 'Cadeau': 'Television', 'Nom': 'Martin', 'Prenom': 'Sophie'}"
-    },
-    {
-      "Statement": "INSERT INTO \"SaveChristmas\" VALUE {'ID': 5, 'Address': '202 Festive Boulevard', 'Cadeau': 'Jouet', 'Nom': 'Bertrand', 'Prenom': 'Lucie'}"
+        "Statement": "INSERT INTO \"SaveCloudmas\" VALUE {'Address': '1 rue de la Pomme Pourrie', 'ID': 6, 'Cadeau': 'Ordinateur portable', 'Nom': 'Laval', 'Prenom': 'Corentin'}"
     }
-  ]
-  
+]

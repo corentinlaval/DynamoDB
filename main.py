@@ -13,7 +13,7 @@ client = boto3.client(
 try:
     # Scan the entire table
     response = client.scan(
-        TableName="SaveChristmas"
+        TableName="SaveCloudmas"
     )
     # Print the retrieved items
     items = response.get('Items', [])
